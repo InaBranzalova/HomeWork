@@ -11,3 +11,13 @@ BMI = W / (H * H)
 print(BMI)
 print(round(BMI , 2))
 print(round(BMI,3))
+
+
+
+W = int(input('Enter weight in kg :   '))
+print(W)
+H = int(input('Enter your hight in sm :   '))
+print(H)
+BMI = (W/(H*H))
+res = round(BMI,2)
+print("Your body mass index is ", res)
