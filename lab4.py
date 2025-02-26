@@ -7,14 +7,12 @@
 """
 
 ### Your code here
-number1 = int(input("Enter a number for start:"))
-number2 = int(input("Enter a number for stop:"))
-number3 = int(input("Enter a number for step:"))
-r = range(number1,number2,number3)
+start = int(input("Enter a number for start:"))
+stop = int(input("Enter a number for stop:"))
+step = int(input("Enter a number for step:"))
+r = range(start,stop,step)
 
-print(list(r))
-print(list(r))
-
+print(f"Generated list:" ,list(r))
 
 
 
@@ -35,15 +33,12 @@ print(list(r))
 """
 
 ### Your code here
-list = (input(f'Enter a list of numbers separated by spaces:'))
-user = int(input(f"Enter number for start :"))
-user1 = int(input(f'Enter nuber for end: '))
-slices_list  = input(f'{user}:{user1}')
-print(list(slices_list))
-
-
-
-
+numbers = (input(f'Enter a list of numbers separated by spaces:'))
+start = int(input(f"Enter number for start :"))
+end = int(input(f'Enter nuber for end: '))
+input_list = list(map(int,numbers.split()))
+sliced_list = input_list[start:end]
+print(f"Sliced list : {sliced_list}")
 
 
 
@@ -64,6 +59,10 @@ print(list(slices_list))
 """
 
 ### Your code here
+r = range(1,51)
+print(f'Original list:' , list(r))
+evens = list(r)[1:51:2]
+print(f'Even numbers:' , evens)
 
 ### EXPECTED OUTPUT:
 # Original list: [1, 2, 3, ..., 50]
@@ -79,6 +78,16 @@ print(list(slices_list))
 """
 
 ### Your code here
+count_down = range(100, 50, -5)
+print(f'Original list:' ,list(count_down))
+first_half = (count_down)[:6]
+print(f'First half: ' ,list(first_half))
+#  ? Има ли начин да не трябва да се броят стъпките? 
+    #    Не се получава.Защо?
+x = 1,2,3,4,5,6,7
+y = x [ 1: 5: -1]
+print(y)
+#  Не ми изписа рейджа с минуса, докато не му сложих спейс,а на положителните изписва.
 
 ### EXPECTED OUTPUT:
 # Original list: [100, 95, 90, ..., 50]
@@ -93,6 +102,10 @@ print(list(slices_list))
 """
 
 ### Your code here
+word = input(f'User please enter a word: ')
+print(word)
+reverse_word = word[:: -1]
+print(reverse_word)
 
 ### EXPECTED OUTPUT:
 # Enter a word: Python
@@ -108,6 +121,10 @@ print(list(slices_list))
 """
 
 ### Your code here
+numbers = range(10,100,10)
+print(f'Original list:' ,list(numbers))
+middle_part = numbers[2: -2]
+print(f'Middle part:' ,list(middle_part))
 
 ### EXPECTED OUTPUT:
 # Original list: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
@@ -122,7 +139,10 @@ print(list(slices_list))
 """
 
 ### Your code here
-
+sentence = input(f'User please enter a sentence: ')
+print(sentence)
+every_second_char = sentence[:: 2]
+print(every_second_char)
 ### EXPECTED OUTPUT:
 # Enter a sentence: Python slicing is powerful!
 # Every second character: Pto lcn spwru!
@@ -137,6 +157,21 @@ print(list(slices_list))
 """
 
 ### Your code here
+# 
+name = input('User please enter 3 names : ')
+names = [name]
+print (names)
+sorted_names = names[:]
+sorted_names.sort()
+    #    print (sorted_names) - Защо не работи така?
+names = []
+names.append(input('Enter name 1 :'))
+names.append(input('Enter name 2 :'))
+names.append(input('Enter name 3 :'))
+print(names)
+sorted_names = names[:]
+sorted_names.sort()
+print(sorted_names)
 
 ### EXPECTED OUTPUT:
 # Enter 1st name: Maria
@@ -155,6 +190,13 @@ print(list(slices_list))
 """
 
 ### Your code here
+word = input('Enter a word: ')
+lower_word = word.lower()
+if lower_word==lower_word[:: -1]:
+    print(f'The word {word} is a palitrome')
+else:
+    print(f'The word {word} is not a palitrome')
+
 
 ### EXPECTED OUTPUT:
 # Enter a word : Racecar
